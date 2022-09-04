@@ -1,0 +1,42 @@
+<html>
+    <head>
+       <script>
+
+                function cal() {    
+                    let int1 = document.getElementById("A").value;
+                    let int2 = document.getElementById("B").value;      
+                    let n1 = parseFloat(int1);
+                    let n2 = parseFloat(int2);                 
+                    let op = document.getElementById("opr").value;    
+                    let text = document.getElementById("C")
+                   
+                     
+                     if (op=="+") {
+                       text.value = n1+n2;
+                     }          
+                    else if (op=="-")  {      
+                      text.value = n1-n2;
+                    }
+                    else if (op=="*")  {      
+                      text.value = n1*n2;
+                    }
+                    else if (op=="/")  {      
+                      text.value = n1/n2;
+                    }      
+                  }
+       </script>
+    </head>
+    <body>
+        <input type="text" id="A" > 
+        <select name="opr" id="opr">
+            <option value="">--</option>
+            <option value="+" >+</option>
+            <option value="-" >-</option>
+            <option value="*" >*</option>
+            <option value="/" >/</option>             
+          </select>  
+        <input type="text" id="B" > =
+        <input type="text" id="C"> 
+        <button onclick="cal()">compute</button>
+    </body>
+</html>
